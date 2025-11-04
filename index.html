@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - João Pedro A. E. Santo</title>
+    
+    <!-- Carregando o Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonte Inter para um visual mais moderno -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Define a fonte Inter como padrão */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* bg-gray-900 */
+        }
+        
+        /* Estilo para as tags de habilidade */
+        .skill-tag {
+            background-color: #374151; /* bg-gray-700 */
+            color: #D1D5DB; /* text-gray-300 */
+            padding: 4px 12px;
+            border-radius: 9999px; /* rounded-full */
+            font-size: 0.875rem; /* text-sm */
+            font-weight: 500; /* font-medium */
+            transition: all 0.2s ease-in-out;
+        }
+        .skill-tag:hover {
+            background-color: #4B5563; /* bg-gray-600 */
+            color: #FFF; /* text-white */
+        }
+
+        /* Estilo para o "timeline" da experiência */
+        .timeline-item {
+            position: relative;
+            padding-left: 2.5rem; /* pl-10 */
+            padding-bottom: 2rem; /* pb-8 */
+            border-left: 2px solid #374151; /* border-l-2 border-gray-700 */
+        }
+        .timeline-item:last-child {
+            border-left: 2px solid transparent;
+            padding-bottom: 0;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -0.5625rem; /* -left-[9px] */
+            top: 0.25rem; /* top-1 */
+            width: 1.125rem; /* w-4.5 */
+            height: 1.125rem; /* h-4.5 */
+            background-color: #4B5563; /* bg-gray-600 */
+            border: 3px solid #1F2937; /* border-4 border-gray-800 */
+            border-radius: 9999px; /* rounded-full */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 antialiased">
+
+    <!-- Container Principal -->
+    <div class="container mx-auto max-w-4xl p-6 md:p-12">
+
+        <!-- === SEÇÃO HEADER (HERO) === -->
+        <header class="mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-3">
+                JOÃO PEDRO A. E. SANTO
+            </h1>
+            <h2 class="text-xl md:text-2xl font-light text-gray-300 mb-6">
+                Analista de Suporte N2 & Desenvolvedor Java
+            </h2>
+            
+            <!-- Contatos -->
+            <div class="flex flex-col md:flex-row md:items-center gap-4 text-gray-400">
+                <!-- Email -->
+                <a href="mailto:jparaujo1234@hotmail.com" class="flex items-center gap-2 hover:text-white transition-colors duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                    </svg>
+                    <span>jparaujo1234@hotmail.com</span>
+                </a>
+                
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/joaopedrosanto" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-white transition-colors duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                       <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.388 0-1.601 1.086-1.601 2.206v4.248H8.014V8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.337 7.433a1.066 1.066 0 01-1.066-1.065 1.066 1.066 0 011.066-1.066 1.066 1.066 0 011.066 1.066 1.066 1.066 0 01-1.066 1.065zm1.33 8.905H4.007V8.59h2.66v7.748z" clip-rule="evenodd" />
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+                
+                <!-- GitHub -->
+                <a href="https://github.com/JoaoPedroEspirito" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-white transition-colors duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.418 2.865 8.165 6.839 9.49.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 5.424c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.202 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0020 10c0-5.523-4.477-10-10-10z" clip-rule="evenodd" />
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- === SEÇÃO SOBRE MIM === -->
+        <section id="sobre" class="mb-12 bg-gray-800 p-6 md:p-8 rounded-lg shadow-xl">
+            <h3 class="text-3xl font-semibold text-white pb-2 mb-6">Resumo Profissional</h3>
+            <p class="text-lg text-gray-300 leading-relaxed">
+                Profissional de TI cursando Sistemas de Informação, atualmente trabalhando como Analista de Suporte N2, com vivência em atualização de Sistema, suporte técnico, redes, DHCP, Windows e Firewalls. Também possuo experiência em desenvolvimento Java com Spring Boot, APIs REST, bancos de dados relacionais e não relacionais, além de conhecimento em cloud (AWS, Azure) e metodologias ágeis (Scrum/Kanban).
+            </p>
+        </section>
+
+        <!-- === SEÇÃO EXPERIÊNCIA === -->
+        <section id="experiencia" class="mb-12">
+            <h3 class="text-3xl font-semibold text-white border-b-2 border-gray-700 pb-2 mb-6">Experiência Profissional</h3>
+            <div class="space-y-0"> <!-- Alterado de space-y-8 para 0 para usar o timeline -->
+                
+                <!-- Job 1: Analista N2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-1">
+                        <h4 class="text-xl font-bold text-white">Analista de Suporte N2</h4>
+                        <span class="text-sm font-medium text-gray-400 mt-1 sm:mt-0">07/2025 - Atual</span>
+                    </div>
+                    <p class="text-md text-gray-400 mb-3">(PJ)</p>
+                    <ul class="list-disc list-outside ml-5 text-gray-300 space-y-2">
+                        <li>Manutenção e configuração de hardware e software.</li>
+                        <li>Apoio em projetos de atualização de sistemas.</li>
+                        <li>Gerenciamento de relatórios e procedimentos.</li>
+                        <li>Suporte em Redes e infraestrutura.</li>
+                        <li>Suporte técnico e resolução de problemas.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 2: Aux Infra -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-1">
+                        <h4 class="text-xl font-bold text-white">Auxiliar de Infraestrutura Júnior</h4>
+                        <span class="text-sm font-medium text-gray-400 mt-1 sm:mt-0">01/2025 - 05/2025</span>
+                    </div>
+                    <p class="text-md text-gray-400 mb-3">UMC</p>
+                    <ul class="list-disc list-outside ml-5 text-gray-300 space-y-2">
+                        <li>Administração de servidores Windows e Linux.</li>
+                        <li>Configuração de switches, roteadores e serviços de rede.</li>
+                        <li>Configuração e gerenciamento de firewall (Sophos).</li>
+                        <li>Execução de backups e testes de restauração.</li>
+                        <li>Suporte técnico a usuários e manutenção de hardware/software.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 3: Estágio Java -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-1">
+                        <h4 class="text-xl font-bold text-white">Estágio em Desenvolvimento Java</h4>
+                        <span class="text-sm font-medium text-gray-400 mt-1 sm:mt-0">05/2025 - 07/2025</span>
+                    </div>
+                    <p class="text-md text-gray-400 mb-3">KAIROS</p>
+                    <ul class="list-disc list-outside ml-5 text-gray-300 space-y-2">
+                        <li>Desenvolvimento de APIs REST com Spring Boot.</li>
+                        <li>Integração com bancos de dados (SQL e NoSQL).</li>
+                        <li>Versionamento de código com GitLab e pipelines CI/CD (Jenkins).</li>
+                        <li>Participação em cerimônias ágeis (daily, planning, review).</li>
+                    </ul>
+                </div>
+                
+                <!-- Job 4: Aux Suporte -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-1">
+                        <h4 class="text-xl font-bold text-white">Auxiliar de Suporte Técnico</h4>
+                        <span class="text-sm font-medium text-gray-400 mt-1 sm:mt-0">11/2023 - 01/2025</span>
+                    </div>
+                    <p class="text-md text-gray-400 mb-3">UMC</p>
+                    <ul class="list-disc list-outside ml-5 text-gray-300 space-y-2">
+                        <li>Manutenção preventiva e corretiva de desktops e notebooks.</li>
+                        <li>Instalação e configuração de softwares e sistemas.</li>
+                        <li>Montagem e instalação de computadores.</li>
+                        <li>Registro e acompanhamento de chamados de TI.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- === SEÇÃO HABILIDADES === -->
+        <section id="habilidades" class="mb-12">
+            <h3 class="text-3xl font-semibold text-white border-b-2 border-gray-700 pb-2 mb-6">Habilidades Técnicas</h3>
+            <div class="space-y-6">
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-300 mb-3">Redes e Infraestrutura</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Active Directory</span>
+                        <span class="skill-tag">DHCP</span>
+                        <span class="skill-tag">DNS</span>
+                        <span class="skill-tag">Zabbix</span>
+                        <span class="skill-tag">Sophos</span>
+                        <span class="skill-tag">Windows Server</span>
+                        <span class="skill-tag">Linux</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-300 mb-3">Programação</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Java (Spring Boot)</span>
+                        <span class="skill-tag">C# (.NET)</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-300 mb-3">Bancos de Dados</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">SQL Server</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-300 mb-3">Ferramentas e Produtividade</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitLab</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">Jira</span>
+                        <span class="skill-tag">Confluence</span>
+                        <span class="skill-tag">Office 365</span>
+                        <span class="skill-tag">Power BI</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-300 mb-3">Cloud e Virtualização</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">VMware</span>
+                        <span class="skill-tag">VirtualBox</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-300 mb-3">Metodologias</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Scrum</span>
+                        <span class="skill-tag">Kanban</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- === SEÇÃO FORMAÇÃO & CURSOS (Combinado) === -->
+        <section id="educacao" class="mb-12">
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Formação -->
+                <div>
+                    <h3 class="text-3xl font-semibold text-white border-b-2 border-gray-700 pb-2 mb-6">Formação</h3>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-xl h-full">
+                        <h4 class="text-xl font-bold text-white">Bacharelado em Sistemas de Informação</h4>
+                        <p class="text-gray-400 mb-1">Universidade de Mogi das Cruzes</p>
+                        <p class="text-sm text-gray-500">2022 - 2025</p>
+                    </div>
+                </div>
+                
+                <!-- Cursos -->
+                <div>
+                    <h3 class="text-3xl font-semibold text-white border-b-2 border-gray-700 pb-2 mb-6">Cursos</h3>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-xl h-full">
+                        <ul class="list-disc list-outside ml-5 text-gray-300 space-y-2">
+                            <li>Curso Java - DIO (Cursando)</li>
+                            <li>Curso .NET - DIO (97h)</li>
+                            <li>Formação em AWS - Udemy (Cursando)</li>
+                            <li>Curso de Linux - DIO (20h)</li>
+                            <li>Lógica de Programação - DIO (40h)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === FOOTER === -->
+        <footer class="text-center mt-16 pt-8 border-t border-gray-700">
+            <p class="text-gray-500">&copy; 2025 João Pedro A. E. Santo. Desenvolvido com HTML e Tailwind CSS.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
